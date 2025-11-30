@@ -1,0 +1,5 @@
+{
+  "name": "FinCompete Analysis",
+  "description": "A financial analysis tool that generates a comparative table of a company and its top 5 competitors using real-time market data.",
+  "requestFramePermissions": []
+}
