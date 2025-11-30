@@ -25,13 +25,13 @@ const FinancialTable: React.FC<FinancialTableProps> = ({ data }) => {
   ];
 
   return (
-    <div className="w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-      <div className="overflow-x-auto">
+    <div className="w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm max-h-[600px] overflow-y-auto">
+      <div className="relative overflow-x-auto">
         <table className="w-full text-sm text-left">
-          <thead className="text-xs font-semibold uppercase text-slate-500 bg-slate-50 border-b border-slate-200">
+          <thead className="text-xs font-semibold uppercase text-slate-500 bg-slate-50 border-b border-slate-200 sticky top-0 z-10 shadow-sm">
             <tr>
               {headers.map((header) => (
-                <th key={header.key} className="px-6 py-4 whitespace-nowrap">
+                <th key={header.key} className="px-6 py-4 whitespace-nowrap bg-slate-50">
                   {header.label}
                 </th>
               ))}
@@ -54,7 +54,7 @@ const FinancialTable: React.FC<FinancialTableProps> = ({ data }) => {
                 <td className="px-6 py-4 text-emerald-600">{company.roic}</td>
                 <td className="px-6 py-4 text-slate-700">{company.evEbit}</td>
                 <td className="px-6 py-4 text-slate-700">{company.per}</td>
-                <td className="px-6 py-4 text-slate-700">{company.fcfPerShare}</td>
+                <td className="px-6 py-4 text-slate-700 font-medium">{company.fcfPerShare}</td>
                 <td className="px-6 py-4 text-slate-700">{company.beta}</td>
                 <td className="px-6 py-4 text-slate-600">{company.ke}</td>
                 <td className="px-6 py-4 text-slate-600">{company.kd}</td>
